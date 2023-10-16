@@ -10,6 +10,8 @@
     Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
 
         Utiliza -v "$PWD"/htdocs:/usr/local/apache2/htdocs/
+        
+        $docker container run -d -p 8000:80 -v "$$PWD"/htdocs:/usr/local/apache2/htdocs/
 
     Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
     Crea un contenedor 'asir_web1' que use este mismo directorio para 'htdocs' y el puerto 8000
